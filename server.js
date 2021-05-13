@@ -53,6 +53,6 @@ app.put('/image',(req,res) => {
     image.handleImage(req,res,database);
 })
 
-app.listen(3000, () => {
-    console.log('app running port: 3000');
+app.listen(process.env.PORT || 3000, () => {
+    console.log('app running port:',process.env.PORT);
 })
