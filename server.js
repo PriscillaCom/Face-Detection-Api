@@ -13,10 +13,8 @@ const knex = require('knex');
 const database = knex({
     client: 'pg',
     connection: {
-        host : 'postgresql-tetrahedral-65929',
-        user : 'postgres',
-        password : '9696',
-        database : 'detection'
+        host : process.env.DATABASE_URL,
+        ssl: true
     }
 });
 
